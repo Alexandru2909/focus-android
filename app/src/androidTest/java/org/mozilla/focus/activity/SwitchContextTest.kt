@@ -8,12 +8,12 @@ import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.UiSelector
 import androidx.test.uiautomator.Until
+import java.io.IOException
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
 import org.junit.Assert
 import org.junit.Assert.assertTrue
 import org.junit.Before
-import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -29,7 +29,6 @@ import org.mozilla.focus.helpers.TestHelper.mDevice
 import org.mozilla.focus.helpers.TestHelper.pressHomeKey
 import org.mozilla.focus.helpers.TestHelper.waitingTime
 import org.mozilla.focus.testAnnotations.SmokeTest
-import java.io.IOException
 
 // This test switches out of Focus and opens it from the private browsing notification
 @RunWith(AndroidJUnit4ClassRunner::class)
@@ -67,7 +66,7 @@ class SwitchContextTest {
 
     @SmokeTest
     @Test
-    @Ignore("Failing. See https://github.com/mozilla-mobile/focus-android/issues/6486")
+   // @Ignore("Failing. See https://github.com/mozilla-mobile/focus-android/issues/6486")
     fun notificationOpenButtonTest() {
         val testPage = TestAssetHelper.getGenericAsset(webServer)
 

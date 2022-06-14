@@ -39,16 +39,14 @@ class NotificationRobot {
     }
 
     fun verifySystemNotificationExists(notificationMessage: String) {
-        val notificationInTray = mDevice.wait(
-            Until.hasObject(
-                By.res(NOTIFICATION_SHADE).hasDescendant(
-                    By.text(notificationMessage)
-                )
-            ),
-            waitingTime
-        )
+        val notification = mDevice.findObject(UiSelector().text(notificationMessage))
+        while (!notification.exists()) {
+            UiScrollable(
+                UiSelector().resourceId(NOTIFICATION_SHADE)
+            ).flingToEnd(1)
+        }
 
-        assertTrue(notificationInTray)
+        assertTrue(notification.exists())
     }
 
     fun verifyMediaNotificationExists(notificationMessage: String) {
