@@ -120,8 +120,21 @@
 
 
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
-         Clicking this action will launch Focus and perform a search in the default search engine. -->
-    <string name="text_selection_search_action">Serĉi private</string>
+         Focus is hard coded since we can't use variables in this context.
+         Do not translate or transliterate Focus.-->
+    <string name="text_selection_search_action_focus">Serĉi en Focus</string>
+    <!-- This is the label of an action we offer when the user selects text in other third-party apps.
+             Klar is hard coded since we can't use variables in this context.
+             Do not translate or transliterate Klar.-->
+    <string name="text_selection_search_action_klar">Serĉi en Klar</string>
+    <!-- This is the label of an action we offer when the user selects text in other third-party apps.
+            Focus Beta is hard coded since we can't use variables in this context.
+            Do not translate or transliterate Focus Beta.-->
+    <string name="text_selection_search_action_focus_beta">Serĉi en Focus Beta</string>
+    <!-- This is the label of an action we offer when the user selects text in other third-party apps.
+          Focus Nightly is hard coded since we can't use variables in this context.
+          Do not translate or transliterate Focus Nightly.-->
+    <string name="text_selection_search_action_focus_nightly">Serĉi en Focus Nightly</string>
 
     <!-- Content of about focus. Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
          Argument 2 is the url for the learn-more link. -->
@@ -296,11 +309,12 @@
 
     <!-- Preference Title: Biometrics can be used to unlock Focus if the previous session's data was not erased by the user. -->
     <string name="preference_security_biometric">Uzi fingrospuron por malbloki programon</string>
+
     <!-- Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Focus if the app had a URL
         open when the app was last run to ensure that only the phone's owner can view a previous session.
         %s will be replaced by the app name (e.g. Firefox Focus)
         Shortcuts is a feature that allows the user to pin his favorite websites to Focus home screen so he can quickly access them-->
-    <string moz:removedIn="102" name="preference_security_biometric_summary" tools:ignore="UnusedResources">Via fingrospuro povas malbloki %1$s se readreso jam estas malfermita en la programo. La kaŝreĝimo estos ŝaltita.</string>
+    <string name="preference_security_biometric_summary2">Malbloki per fingrospuro se vi aldonis ŝparvojojn aŭ kiam retejo jam estas malfermita en %s.</string>
 
     <!-- Preference Title: Secure Mode is a setting that prevents the app's content to show up in the "recent apps" screen
          and prevents the user from taking screenshots or casting the app to other displays. -->
@@ -362,10 +376,6 @@
     <string name="preference_search_add3">Aldoni alian serĉilon</string>
     <!-- Explanation text above the list of search engines-->
     <string name="preference_select_preferred_engine">Elektu vian preferatan serĉilon:</string>
-
-    <!-- Title: Homescreen tips settings toggle to determine whether or not tips are displayed when
-     a user first launches the app. -->
-    <string name="preference_homescreen_tips">Montri konsiletojn en la hejmekrano</string>
 
     <!-- Clickable action text that shows when user long-presses on a search engine search field (this is similar to paste or copy when long-pressing a text field) -->
     <string name="action_option_add_search_engine">Aldoni serĉilon</string>
@@ -493,15 +503,36 @@
 
 
 
-  <!-- Onboarding: Title -->
+  <!-- Content description (not visible, for screen readers etc.): This is the description for the close button from the new onboarding flow screen one and two -->
+    <string name="onboarding_close_button_content_description">Fermi</string>
+
+    <!-- New Onboarding flow first screen title -->
     <!-- %1$s will be replaced by the app name and build variant(e.g. Firefox Focus, Firefox Klar Nightly) -->
-    <string name="onboarding_title">Bonvenon al %1$s!</string>
+    <string name="onboarding_first_screen_title">Bonvenon al %1$s</string>
 
-    <!-- Onboarding: Incognito Title -->
-    <string name="onboarding_incognito_title">Tie, kie renkontiĝas anonimeco kaj nevideblo</string>
+    <!-- New Onboarding flow first screen subtitle the one that appears under title -->
+    <string name="onboarding_first_screen_subtitle">Rapida. Privata. Sendistra.</string>
 
-    <!-- Onboarding: Start browsing -->
-    <string name="onboarding_start_browsing">Komenci retumi</string>
+    <!-- New Onboarding flow first screen button label-->
+    <string name="onboarding_first_screen_button_text">Unuaj paŝoj</string>
+
+    <!-- Onboarding second screen: Title -->
+    <!-- %1$s will be replaced by the app short name(Focus) -->
+    <string name="onboarding_second_screen_title">%1$s ne estas kiel aliaj retumiloj</string>
+
+    <!-- New Onboarding flow second screen subtitle the one that appears under title -->
+    <string name="onboarding_second_screen_subtitle_one">Ni viŝas vian historion kiam vi fermas la programon por havi kroman privatecon.</string>
+
+    <!-- New Onboarding flow second screen subtitle two the one that appears under subtitle one -->
+    <!-- %1$s will be replaced by the app short name(Focus) -->
+    <string name="onboarding_second_screen_subtitle_two">Igu %1$s via norma retumilo por protekti viajn datumojn en ĉiu malfermita ligilo.</string>
+
+    <!-- New Onboarding flow second screen make Focus default browser button label-->
+    <string name="onboarding_second_screen_default_browser_button_text">Difini kiel norma retumilo</string>
+
+    <!-- New Onboarding flow second screen skip onboarding button label-->
+    <string name="onboarding_second_screen_skip_button_text">Ignori</string>
+
 
     <!-- First run tour (Default browser): Title -->
     <string name="firstrun_defaultbrowser_title">Plibonigi vian privatecon</string>
@@ -540,6 +571,10 @@
     <!-- Label of the action that will close the dialog and not add anything to the home screen (shown in the confirmation dialog). -->
     <string name="dialog_addtohomescreen_action_no">NE</string>
 
+    <!-- When enhanced tracking protection is disabled for the current session then we will show this warning in the "Add to home screen" dialog to
+         let the user know that the shortcut will always be opened with enhanced tracking protection disabled. -->
+    <string name="dialog_addtohomescreen_tracking_protection2">Tiu ĉi ŝparvojo estos malfermita sen plibonigita protekto kontraŭ spurado</string>
+
     <!-- The user visible name of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active.
     The recommended maximum length is 40 characters; the value may be truncated if it is too long.
 
@@ -570,7 +605,28 @@
 
 
 
-  <!-- Text shown in prompts for GeckoView -->
+  <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the MPL (e.g. https://www.mozilla.org/en-US/MPL/) -->
+    <string name="your_rights_content2"><![CDATA[%1$s estas liverita laŭ la kondiĉoj de la permesilo <a href="%2$s">Mozilla Public License</a> kaj de aliaj malfermitkodaj permesiloj.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
+    <string name="your_rights_content3"><![CDATA[Vi ricevas neniun rajton aŭ uzopermeson pri la registritaj markoj de Mozilla Foundation aŭ de iu alia. Tio inkluzivas la nomojn kaj emblemojn de Mozilla, Firefox aŭ %1$s. Pli da informo troveblas <a href="%2$s">ĉi tie</a>.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the list of licenses used by the dependencies.-->
+    <string name="your_rights_content4"><![CDATA[Aldonaj fontaj kodoj por %1$s haveblas sub pluraj aliaj liberaj kaj malfermitkodaj <a href="%2$s">permesiloj</a>.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the GPL
+    %3$s will be replaced with a URL linking to the tracking protection wiki page (e.g. https://wiki.mozilla.org/Security/Tracking_protection#Lists) -->
+    <string name="your_rights_content5"><![CDATA[%1$s uzas ankaŭ listojn de blokado provizitaj de Disconnect, Inc. kiel apartajn kaj sendependajn verkojn sub la <a href="%2$s">GNU General Public License v3</a>, kiu haveblas <a href="%3$s">ĉi tie</a>.]]></string>
+
+    <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">Nomo de uzanto</string>
     <string name="gv_prompt_password_hint">Pasvorto</string>
     <string name="gv_prompt_clear">Viŝi</string>
@@ -628,6 +684,27 @@
 
     <!-- Preference for site permissions -->
     <string name="preference_site_permissions">Permesoj por retejo</string>
+
+    <!--  Preference for cookie banner. The name of the item from settings screen and the title of the cookie banner screen. -->
+    <string name="preferences_cookie_banner">Redukto de kuketaj anoncoj</string>
+
+    <!--  Preference summary for the cookie banner. If the cookie banner option is not disabled. -->
+    <string name="preferences_cookie_banner_summary_on">Ŝaltita</string>
+
+    <!--  Preference summary for the cookie banner. If the cookie banner option is disabled. -->
+    <string name="preferences_cookie_banner_summary_off">Malŝaltita</string>
+
+    <!--  Title preference inside Cookie banner reduction screen. Here you can set the cookie banner option to disabled or reject_all. -->
+    <string name="cookie_banner_reject_all_option_title">Redukto de kuketaj anoncoj</string>
+
+    <!--  Preference summary inside Cookie banner reduction screen. Here you can set the cookie banner option to disabled or reject_all. -->
+    <string name="cookie_banner_reject_all_option_summary">Montri malpli da anoncoj per aŭtomata rifuzo de kuketaj petoj, kiam tio eblas.</string>
+
+    <!--  Checkbox Preference title inside Cookie banner reduction screen. Here you can set the cookie banner option to reject_or_accept_all or reject_all. -->
+    <string name="cookie_banner_further_reduce_option_title">Pluredukti kuketajn anoncojn</string>
+
+    <!--  Checkbox Preference summary inside Cookie banner reduction screen. Here you can set the cookie banner option to reject_or_accept_all or reject_all. -->
+    <string name="cookie_banner_further_reduce_option_summary">Petoj de kuketaj anoncoj estos akceptitaj por ignori pliajn anoncojn.</string>
 
     <!-- Preference for autoplay -->
     <string name="preference_autoplay">Aŭtomata ludado</string>
@@ -710,16 +787,18 @@
     <!-- Preference to enable remote debugging of the app via USB or Wi-Fi -->
     <string name="preference_remote_debugging">Fora senerarigo per USB aŭ sendrata reto</string>
 
-    <!-- Title for the fingerprint authentication dialog box that is shown to the user when opening the app.
-     %1$s is replaced with the app name -->
-    <string name="biometric_auth_title">Malbloki %1$s</string>
+    <!-- Text Button for show biometric prompt -->
+    <string name="show_biometric_button_text">Malbloki</string>
 
-    <!-- Description for the fingerprint authentication dialog box that is shown to the user when opening the app -->
-    <string name="biometric_auth_description">Tuŝu la fingrospuran sensilon por daŭrigi.</string>
+    <!-- Title text for biometric prompt pop-up -->
+    <string name="biometric_prompt_title">Konfirmi per via fingrospuro</string>
 
-    <!-- New session button for the fingerprint authentication dialog box that is shown to the user when opening the app.
-     When pressed, the user's previous session is cleared, and authentication is not required. -->
-    <string name="biometric_auth_new_session">Nova seanco</string>
+    <!-- Subtitle text for biometric prompt pop-up -->
+    <string name="biometric_prompt_subtitle">Vi povas uzi vian fingrospuron por daŭrigi vian nunan sesion en la apo.</string>
+
+    <!-- Button for the fingerprint authentication dialog box that is shown to the user when sharing a link to the app
+    while the user has biometric authentication enabled. When pressed, the user's previous session is cleared, and the shared link is opened. -->
+    <string name="biometric_auth_open_link_new_session">Malfermi ligilon en nova seancon</string>
 
     <!-- Description for the fingerprint authentication image. Used for accessibility purposes. -->
     <string name="biometric_auth_image_description">Emblemo de fingrospuro</string>
@@ -731,6 +810,13 @@
     <!-- Error text displayed when the user's fingerprint moved too quickly upon re-entering the app
     This is displayed during the authentication flow as the app launches.-->
     <string name="biometric_auth_moved_too_quickly">La fingro moviĝis tro rapide. Provu denove.</string>
+
+    <!-- Title for the prompt to enable search suggestions -->
+    <string name="enable_search_suggestion_title2">Ĉu montri serĉajn sugestojn?</string>
+
+    <!-- Description for the prompt to enable search suggestions
+        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
+    <string name="enable_search_suggestion_description">Por povi ion sugesti, %1$s devas sendi kion vi tajpas en la adresa strio al la serĉilo.</string>
 
     <!-- Label used for the "NO button" for the prompt to enable search suggestions -->
     <string name="enable_search_suggestions_no">Ne</string>
@@ -779,8 +865,6 @@
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">Iri tuj al la ligilo en nova langeto</string>
 
-    <!-- Preference for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
-    <string moz:removedIn="97" name="preference_category_safe_browsing">Sekura retumo</string>
     <!-- Preference title for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
     <string name="preference_safe_browsing_title">Bloki verŝajne danĝeran kaj trompan enhavon</string>
     <!-- Preference summary for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
@@ -788,6 +872,9 @@
 
     <!-- Title of the preference to enable "HTTPS-Only" mode -->
     <string name="preference_https_only_title">HTTPS-nura reĝimo</string>
+
+    <!-- Description of the preference to enable "HTTPS-Only" mode. -->
+    <string name="preference_https_only_summary3">Aŭtomate klopodi konekti al retejoj per la ĉifrita HTTPS protokolo por pli sekura aliro.</string>
 
     <!-- Preference for exceptions tracking protection -->
     <string name="preference_exceptions">Esceptoj</string>
@@ -833,6 +920,19 @@
     <!-- Category of trackers (analytics) that can be blocked by Enhanced Tracking Protection -->
     <string name="analytics">Statistikoj</string>
 
+    <!-- Preference title for enhanced tracking protection settings -->
+    <string name="enhanced_tracking_protection">Plibonigita protekto kontraŭ spurado</string>
+    <!-- Enhanced tracking protection preference description when the tracking protection is disabled for this site-->
+    <string name="enhanced_tracking_protection_state_off">Protektoj malŝaltitaj por tiu ĉi retejo</string>
+    <!-- Enhanced tracking protection preference description when the tracking protection is enabled for this site-->
+    <string name="enhanced_tracking_protection_state_on">Protektoj ŝaltitaj por tiu ĉi retejo</string>
+    <!-- Label that indicates a site is using a secure connection -->
+    <string name="secure_connection">Sekura konekto</string>
+    <!-- Label that indicates a site is using a insecure connection -->
+    <string name="insecure_connection">Nesekura konekto</string>
+    <!-- Title for the list of trackers enhanced tracking ptotection can block-->
+    <string name="trackers_and_scripts">Spuriloj kaj skriptoj blokendaj</string>
+
     <!-- Content description (not visible, for screen readers etc.): Navigate back button description -->
     <string name="go_back">Malantaŭen</string>
 
@@ -847,6 +947,10 @@
     <!-- Placeholder text for the input field of rename top site-->
     <string name="placeholder_rename_top_site">Nomo de ŝparvojo</string>
 
+    <!-- Text for context menu additional note.
+    %1$s is a placeholder for the app name. -->
+    <string name="contextmenu_erased_images_note2">Konservitaj kaj dividitaj bildoj &lt;b&gt;ne estos&lt;/b&gt; forigitaj kiam vi viŝas la historion de %1$s</string>
+
     <!-- Theme Preferences -->
     <!-- Preference category for changing default theme to dark or light mode -->
     <string name="preferences_theme">Etoso</string>
@@ -860,9 +964,18 @@
     <!-- Preference for using following device theme -->
     <string name="preference_follow_device_theme">Uzi la etoson de la aparato</string>
 
+    <!-- The title of the error page for websites that do not support HTTPS when HTTPS-Only is turned on  -->
+    <string name="errorpage_httpsonly_title">La retejo petita de vi ne subtenas HTTPS</string>
+    <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus") -->
+    <string name="errorpage_httpsonly_message">%1$s klopodas norme konekti per HTTPS por pli sekura aliro. Por ŝanĝi tiun ĉi agordon aŭ por trovi pli da informo iru al Agordoj &gt; Privateco kaj sekureco &gt; Sekureco.</string>
+
     <!-- Sessions List -->
     <!-- Content description (not visible, for screen readers etc.): Button that closes a tab n the sessions list -->
     <string name="close_tab">Fermi langeton</string>
+
+    <!-- Contextual Feature Recommendation Popups -->
+    <!-- CFR for Toolbar Shield Icon (Banner Info Message) -->
+    <string name="cfr_for_toolbar_shield_icon2">Kaptita! Ni evitis ke tiu ĉi retejo spionu vin. Tuŝetu la ŝildon iam ajn por vidi kion ni blokas.</string>
 
     <!-- Content description (not visible, for screen readers etc.): Button that closes the CFR popup -->
     <string name="cfr_close_button_description">Fermi ŝprucaĵon</string>
@@ -876,6 +989,35 @@
     <string name="tool_tip_dismiss_button_content_description">Ignori</string>
 
     <!-- CFR for Toolbar Delete Icon (Banner Info Message) -->
-    <string name="cfr_for_toolbar_delete_icon">Seniĝu je viaj personaj datumoj, retuma historio kaj aliaj ĉiseancaj aferoj per tuŝeto de la rubuja butono. Provu!</string>
+    <string name="cfr_for_toolbar_delete_icon2">Tuŝetu ĉi tie por forigi ĉion — historion, kuketojn, ĉion — kaj komenci je nulo en nova langeto.</string>
 
+    <!-- Promote SearchWidget Dialog -->
+
+    !-- Content description (not visible, for screen readers etc.): This is the description for the
+    close button from promote search widget dialog. --&gt;
+    <string name="promote_search_widget_dialog_content_description">Fermi</string>
+
+    !-- Content description (not visible, for screen readers etc.): This is the description for
+    picture of search widget from promote search widget dialog. --&gt;
+    <string name="promote_search_widget_dialog_picture_content_description">Serĉila komponanto</string>
+
+    !-- This is the title of promote search widget dialog. --&gt;
+    <string name="promote_search_widget_dialog_title">Retuma historio viŝita! 🎉</string>
+
+    !-- This is the subtitle of promote search widget dialog. %1$s will get replaced with the name
+    of the app (e.g. &quot;Focus&quot;) --&gt;
+    <!-- Banner Info Message than will appear when user first enters in the app. The location is at the toolbar. -->
+    <string name="cfr_for_start_browsing">Komencu vian seancon de privata retumo kaj ni blokos spurilojn kaj aliajn aĉaĵojn dum vi retumas.</string>
+
+    !-- This is the subtitle of promote search widget dialog. %1$s will get replaced with the name
+    of the app (e.g. &quot;Focus&quot;) --&gt;
+    <string name="promote_search_widget_dialog_subtitle">Plu retumu private, sed venontfoje komencu tion pli rapide per komponanto de %1$s en via hejmekrano.</string>
+
+    !-- This is te text from add search widget to home screen button .The button is located on
+    promote search widget dialog. --&gt;
+    <string name="promote_search_widget_button_text">Aldoni komponanton al hejmekrano</string>
+
+    !-- This is te text of the snackbar that appears after the search widget was added successfully
+    to the home screen. --&gt;
+    <string name="promote_search_widget_snackbar_message">Komponanto aldonita al hejmekrano</string>
 </resources>
